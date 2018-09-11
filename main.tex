@@ -1,0 +1,77 @@
+\documentclass[twocolumn]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor, lipsum}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ bottom=20mm
+ }
+ 
+ \usepackage{kpfonts}
+
+
+\definecolor{blue(munsell)}{rgb}{0.0, 0.5, 0.69}
+\renewcommand{\thesection}{\Roman{section}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Document Proposal}
+% \lhead{Document Proposal}
+\pagenumbering{gobble} % page numbering off
+
+
+ 
+
+\titleformat{name=\section}[block]
+  {\sffamily\large}
+  {}
+  {0pt}
+  {\colorsection}
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+
+\newcommand{\colorsection}[1]{
+\colorbox{gray!15}{\parbox{\dimexpr\textwidth-86\fboxsep}{\centering\bfseries\color{blue(munsell)} \thesection.\ #1}}
+}
+  
+  
+ 
+
+\title{Document Proposal}
+\author{Person 1, Person 2, Person 3, Person 4, etc.}
+%\date{} % Today's date will appear when this is commented out
+
+\begin{document}
+
+\maketitle
+
+
+
+\section{Abstract}
+In this section, we summarize what we do very briefly.\\
+\lipsum[1]
+
+\section{Description}
+In this section, we include what we do, who we target for, and why it is useful project.\\
+\lipsum[2]
+\lipsum[2]
+\lipsum[2]
+
+\section{Features}
+In this section, we describe what features we will launch\\
+\lipsum[3]
+\lipsum[3]
+
+\section{Demo}
+\lipsum[4]
+
+\section{Test}
+\lipsum[5]
+
+\end{document}
